@@ -1,7 +1,12 @@
 package com.busrayalcin.a24tvcloneapp.data.entity
 
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
 data class Category(
-    val categoryId: String, // 7
-    val slug: String, // guncel
-    val title: String // GÜNCEL
-)
+     @SerializedName("categoryId") val categoryId: String, // 7
+     @SerializedName("slug") val slug: String, // guncel
+     @SerializedName("title") val title: String // GÜNCEL
+) :Serializable{
+
+}
