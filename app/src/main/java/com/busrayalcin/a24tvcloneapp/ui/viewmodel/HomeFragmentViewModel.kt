@@ -1,7 +1,9 @@
 package com.busrayalcin.a24tvcloneapp.ui.viewmodel
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
+import com.busrayalcin.a24tvcloneapp.data.entity.Data
 import com.busrayalcin.a24tvcloneapp.data.repo.NewsRepo
 import com.busrayalcin.a24tvcloneapp.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -10,9 +12,11 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeFragmentViewModel @Inject constructor(var nrepo : NewsRepo) : ViewModel(){
+    var newsList : MutableLiveData<List<Data>> = MutableLiveData()
 
     init {
         getAllNews()
+        newsList = nrepo.newsToViewModel()
     }
 
     fun getAllNews() = liveData(Dispatchers.IO) {

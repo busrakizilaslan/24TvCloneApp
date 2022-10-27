@@ -12,7 +12,9 @@ import javax.inject.Inject
 
 class NewsRepo @Inject constructor(var ndao : NewsDao) {
     var newsList : MutableLiveData<List<Data>> = MutableLiveData()
-
+    fun newsToViewModel() : MutableLiveData<List<Data>>{
+        return newsList
+    }
 
     fun getAllNews(){
         Log.e("getAllNews", "has been called.")
