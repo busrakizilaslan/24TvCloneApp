@@ -11,6 +11,7 @@ import android.widget.VideoView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.busrayalcin.a24tvcloneapp.databinding.FragmentHomeBinding
+import com.busrayalcin.a24tvcloneapp.ui.adapter.NewsAdapter
 import com.busrayalcin.a24tvcloneapp.ui.viewmodel.HomeFragmentViewModel
 import com.busrayalcin.a24tvcloneapp.utils.Status
 import dagger.hilt.android.AndroidEntryPoint
@@ -57,7 +58,11 @@ class HomeFragment : Fragment() {
         videoView.start()
 
         viewModel.newsList.observe(viewLifecycleOwner){
-            println(it)
+//            println(it)
+            val adapter = NewsAdapter(requireContext(), it,viewModel)
+            binding.newsAdapter = adapter
+
+
         }
 
         viewModel.getAllNews().observe(viewLifecycleOwner){

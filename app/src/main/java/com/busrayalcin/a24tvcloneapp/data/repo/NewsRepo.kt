@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.busrayalcin.a24tvcloneapp.data.entity.Data
 import com.busrayalcin.a24tvcloneapp.data.entity.DataResponse
+import com.busrayalcin.a24tvcloneapp.data.entity.Item
 import com.busrayalcin.a24tvcloneapp.retrofit.NewsDao
 import retrofit2.Call
 import retrofit2.Callback
@@ -11,8 +12,8 @@ import retrofit2.Response
 import javax.inject.Inject
 
 class NewsRepo @Inject constructor(var ndao : NewsDao) {
-    var newsList : MutableLiveData<List<Data>> = MutableLiveData()
-    fun newsToViewModel() : MutableLiveData<List<Data>>{
+    var newsList : MutableLiveData<List<Item>> = MutableLiveData()
+    fun newsToViewModel() : MutableLiveData<List<Item>>{
         return newsList
     }
 
@@ -21,7 +22,7 @@ class NewsRepo @Inject constructor(var ndao : NewsDao) {
         ndao.getAllNews().enqueue(object : Callback<DataResponse> {
             override fun onResponse(call: Call<DataResponse>?, response: Response<DataResponse>) {
                 Log.e("getAllNews", "onResponse")
-                val list = response.body()!!.newsData
+                val list = response.body()!!.newsData[0].itemList
                 newsList.value = list
             }
             override fun onFailure(call: Call<DataResponse>?, t: Throwable?) {
