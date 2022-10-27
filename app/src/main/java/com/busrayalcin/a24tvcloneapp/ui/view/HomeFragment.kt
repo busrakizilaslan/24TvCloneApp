@@ -39,30 +39,11 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater,container,false)
 
-        val uri: Uri = Uri.parse(videoUrl)
-        videoView = binding.videoView as VideoView
-        videoView.setVideoURI(uri)
-        videoView.requestFocus()
-        val mediaController = MediaController(activity)
-        videoView.setOnPreparedListener {
-            mediaController.setAnchorView(videoView)
-            videoView.start()
-            mediaController.show()
-
-        }
-        mediaController.setMediaPlayer(videoView)
-
-
-
-        videoView.setMediaController(mediaController)
-        videoView.start()
+        showVideo()
 
         viewModel.newsList.observe(viewLifecycleOwner){
-//            println(it)
             val adapter = NewsAdapter(requireContext(), it,viewModel)
             binding.newsAdapter = adapter
-
-
         }
 
         viewModel.getAllNews().observe(viewLifecycleOwner){
@@ -82,5 +63,22 @@ class HomeFragment : Fragment() {
 
         return binding.root
     }
+
+    private fun showVideo() {
+        val uri: Uri = Uri.parse(videoUrl)
+        videoView = binding.videoView as VideoView
+        videoView.setVideoURI(uri)
+        videoView.requestFocus()
+        val mediaController = MediaController(activity)
+        videoView.setOnPreparedListener {
+            mediaController.setAnchorView(videoView)
+            videoView.start()
+            mediaController.show()
+        }
+        mediaController.setMediaPlayer(videoView)
+        videoView.setMediaController(mediaController)
+        videoView.start()
+    }
+
 
 }

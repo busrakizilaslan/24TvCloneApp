@@ -33,7 +33,7 @@ class NewsAdapter(var mContext : Context,
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val newsItem = newsList[position]
-
+        newsItem.itemId
         val hb = holder.binding
         hb.newsObject = newsItem
         hb.ivNewsImage.showUrlImage(newsItem.imageUrl)
