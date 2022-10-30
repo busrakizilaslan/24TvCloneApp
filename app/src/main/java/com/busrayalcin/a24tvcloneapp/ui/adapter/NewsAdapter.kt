@@ -33,18 +33,15 @@ class NewsAdapter(var mContext : Context,
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val newsItem = newsList[position]
-        newsItem.itemId
         val hb = holder.binding
         hb.newsObject = newsItem
         hb.ivNewsImage.showUrlImage(newsItem.imageUrl)
         hb.cvNews.setOnClickListener {
             Navigation.doNavigate(it,HomeFragmentDirections.actionHomeFragmentToDetailFragment(news = newsItem))
         }
-
     }
 
     override fun getItemCount(): Int {
-      //  Log.e("Size : ","${newsList.size}")
         return newsList.size
     }
 }

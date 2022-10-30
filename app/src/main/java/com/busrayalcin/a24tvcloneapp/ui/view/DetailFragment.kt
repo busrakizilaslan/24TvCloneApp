@@ -1,11 +1,13 @@
 package com.busrayalcin.a24tvcloneapp.ui.view
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import com.busrayalcin.a24tvcloneapp.data.entity.news.NewsItem
@@ -14,6 +16,7 @@ import com.busrayalcin.a24tvcloneapp.ui.viewmodel.DetailFragmentViewModel
 import com.busrayalcin.a24tvcloneapp.utils.Status
 import com.busrayalcin.a24tvcloneapp.utils.showUrlImage
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class DetailFragment : Fragment() {
@@ -38,10 +41,17 @@ class DetailFragment : Fragment() {
         val bundle : DetailFragmentArgs by navArgs()
         takenNews = bundle.news
         binding.ivImage.showUrlImage(takenNews.imageUrl)
+        binding.tvTitle.text = takenNews.title
+        binding.tvShortText.text = takenNews.shortText
+        binding.tvPublishDate.text = takenNews.publishDate
+        binding.buttonMore.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(takenNews.fullPath))
+            startActivity(browserIntent)
+        }
 
         viewModel.detailsData.observe(viewLifecycleOwner){
-//            binding.tvTitle.text = it.newsDetail.title
-            Log.d("title:",it.newsDetail.title)
+            //binding.tvTitle.text = it.newsDetail.title
+           // binding.tvShortText.text = it.newsDetail.shortText
         }
 
         viewModel.getDetails().observe(viewLifecycleOwner){
@@ -57,7 +67,6 @@ class DetailFragment : Fragment() {
                 }
             }
         }
-
 
         return binding.root
     }

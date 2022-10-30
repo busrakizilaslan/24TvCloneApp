@@ -21,7 +21,7 @@ class NewsRepo @Inject constructor(var ndao : NewsDao) {
         return newsList
     }
 
-    fun detailsToViewModel() : MutableLiveData<DetailsData>{
+    fun detailsToViewModel() : MutableLiveData<DetailsData> {
         return detailsData
     }
 
@@ -30,7 +30,7 @@ class NewsRepo @Inject constructor(var ndao : NewsDao) {
         ndao.getAllNews().enqueue(object : Callback<NewsResponse> {
             override fun onResponse(call: Call<NewsResponse>?, response: Response<NewsResponse>) {
                 Log.d("getAllNews", "onResponse")
-                val list = response.body()!!.newsData[0].itemList
+                val list = response.body()!!.newsData[1].itemList
                 newsList.value = list
             }
             override fun onFailure(call: Call<NewsResponse>?, t: Throwable?) {
@@ -48,13 +48,8 @@ class NewsRepo @Inject constructor(var ndao : NewsDao) {
                 response: Response<DetailsResponse>
             ) {
                 Log.d("getDetails", "onResponse")
-                val dData = response.body()
-
-                if (dData != null) {
-                    Log.e("dData", dData.toString())
-                }
-                else Log.e("NULL", "onResponse Null")
-//                detailsData.value = dData
+                val dData = response.body()!!.detailsData
+                detailsData.value = dData
             }
 
             override fun onFailure(call: Call<DetailsResponse>, t: Throwable) {
