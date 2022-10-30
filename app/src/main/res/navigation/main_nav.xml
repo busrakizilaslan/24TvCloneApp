@@ -21,6 +21,6 @@
         tools:layout="@layout/fragment_detail" >
         <argument
             android:name="news"
-            app:argType="com.busrayalcin.a24tvcloneapp.data.entity.NewsItem" />
+            app:argType="com.busrayalcin.a24tvcloneapp.data.entity.news.NewsItem" />
     </fragment>
 </navigation>

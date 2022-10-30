@@ -3,7 +3,7 @@ package com.busrayalcin.a24tvcloneapp.ui.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
-import com.busrayalcin.a24tvcloneapp.data.entity.NewsItem
+import com.busrayalcin.a24tvcloneapp.data.entity.news.NewsItem
 import com.busrayalcin.a24tvcloneapp.data.repo.NewsRepo
 import com.busrayalcin.a24tvcloneapp.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel

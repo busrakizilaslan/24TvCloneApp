@@ -8,6 +8,5 @@ class ApiUtils {
                 .getClient(BASE_URL)
                 .create(NewsDao::class.java)
         }
-
     }
 }

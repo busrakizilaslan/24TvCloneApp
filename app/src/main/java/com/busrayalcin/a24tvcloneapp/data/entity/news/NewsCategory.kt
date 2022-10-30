@@ -1,4 +1,4 @@
-package com.busrayalcin.a24tvcloneapp.data.entity
+package com.busrayalcin.a24tvcloneapp.data.entity.news
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

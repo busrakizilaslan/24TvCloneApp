@@ -7,7 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.busrayalcin.a24tvcloneapp.R
-import com.busrayalcin.a24tvcloneapp.data.entity.NewsItem
+import com.busrayalcin.a24tvcloneapp.data.entity.news.NewsItem
 import com.busrayalcin.a24tvcloneapp.databinding.NewsRowBinding
 import com.busrayalcin.a24tvcloneapp.ui.view.HomeFragmentDirections
 import com.busrayalcin.a24tvcloneapp.ui.viewmodel.HomeFragmentViewModel
