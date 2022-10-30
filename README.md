@@ -28,8 +28,6 @@ Using the following APIs:
 
 Home Page | Details Page | PiP Mode Live Feed
 :-------------------------:|:-------------------------:|:-------------------------:
-![](https://github.com/busrakizilaslan/FoodApp/blob/master/screenshots/splashscreen.png)|![](https://github.com/busrakizilaslan/FoodApp/blob/master/screenshots/loginpage.png)|![](https://github.com/busrakizilaslan/FoodApp/blob/master/screenshots/homepage.png)
+![](https://github.com/busrakizilaslan/24TvCloneApp/blob/master/homepage.png)|![](https://github.com/busrakizilaslan/24TvCloneApp/blob/master/detailpage.png)|![]
+(https://github.com/busrakizilaslan/24TvCloneApp/blob/master/pipmode.png)
 
-Details Page             |  Cart Page
-:-------------------------:|:-------------------------:
-![](https://github.com/busrakizilaslan/FoodApp/blob/master/screenshots/fooddetail.png)|![](https://github.com/busrakizilaslan/FoodApp/blob/master/screenshots/cartpage.png)
