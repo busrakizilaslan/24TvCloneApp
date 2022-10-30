@@ -6,7 +6,7 @@
     <data>
         <variable
             name="newsObject"
-            type="com.busrayalcin.a24tvcloneapp.data.entity.Item" />
+            type="com.busrayalcin.a24tvcloneapp.data.entity.NewsItem" />
 
     </data>
 

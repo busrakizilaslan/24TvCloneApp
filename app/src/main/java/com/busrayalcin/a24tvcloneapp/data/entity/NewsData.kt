@@ -3,9 +3,9 @@ package com.busrayalcin.a24tvcloneapp.data.entity
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-data class Data(
+data class NewsData(
     @SerializedName("itemCountInRow") val itemCountInRow: Int, // 1
-    @SerializedName("itemList") val itemList: List<Item>,
+    @SerializedName("itemList") val itemList: List<NewsItem>,
     @SerializedName("lazyLoadingEnabled") val lazyLoadingEnabled: Boolean, // false
     @SerializedName("repeatType") val repeatType: String, // NO_REPEAT
     @SerializedName("sectionBgColor") val sectionBgColor: String, // #e7e7e7

@@ -1,16 +1,13 @@
 package com.busrayalcin.a24tvcloneapp.ui.adapter
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.busrayalcin.a24tvcloneapp.R
-import com.busrayalcin.a24tvcloneapp.data.entity.Data
-import com.busrayalcin.a24tvcloneapp.data.entity.Item
-import com.busrayalcin.a24tvcloneapp.databinding.FragmentHomeBinding
+import com.busrayalcin.a24tvcloneapp.data.entity.NewsItem
 import com.busrayalcin.a24tvcloneapp.databinding.NewsRowBinding
 import com.busrayalcin.a24tvcloneapp.ui.view.HomeFragmentDirections
 import com.busrayalcin.a24tvcloneapp.ui.viewmodel.HomeFragmentViewModel
@@ -18,7 +15,7 @@ import com.busrayalcin.a24tvcloneapp.utils.doNavigate
 import com.busrayalcin.a24tvcloneapp.utils.showUrlImage
 
 class NewsAdapter(var mContext : Context,
-                  var newsList : List<Item>,
+                  var newsList : List<NewsItem>,
                   var viewModel : HomeFragmentViewModel) : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
                       inner class NewsViewHolder(binding: NewsRowBinding ) : RecyclerView.ViewHolder(binding.root){

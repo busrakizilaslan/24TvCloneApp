@@ -3,8 +3,8 @@ package com.busrayalcin.a24tvcloneapp.data.entity
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-data class Item(
-     @SerializedName("category") val category: Category,
+data class NewsItem(
+     @SerializedName("category") val category: NewsCategory,
      @SerializedName("columnistName") val columnistName: String, // "
      @SerializedName("externalUrl") val externalUrl: String, // "
      @SerializedName("fLike") val fLike: String,
