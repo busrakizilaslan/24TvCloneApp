@@ -26,8 +26,8 @@ Using the following APIs:
 
 ## Screens
 
-Home Page | Details Page | PiP Mode Live Feed
+Home Page | Detail Page | PiP Mode
 :-------------------------:|:-------------------------:|:-------------------------:
-![](https://github.com/busrakizilaslan/24TvCloneApp/blob/master/homepage.png)|![](https://github.com/busrakizilaslan/24TvCloneApp/blob/master/detailpage.png)|![]
-(https://github.com/busrakizilaslan/24TvCloneApp/blob/master/pipmode.png)
+![](https://github.com/busrakizilaslan/24TvCloneApp/blob/master/homepage.png)|![](https://github.com/busrakizilaslan/24TvCloneApp/blob/master/detailpage.png)|![](https://github.com/busrakizilaslan/24TvCloneApp/blob/master/pipmode.png)
+
 
