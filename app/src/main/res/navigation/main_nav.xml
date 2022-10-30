@@ -18,5 +18,9 @@
         android:id="@+id/detailFragment"
         android:name="com.busrayalcin.a24tvcloneapp.ui.view.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="news"
+            app:argType="com.busrayalcin.a24tvcloneapp.data.entity.NewsItem" />
+    </fragment>
 </navigation>

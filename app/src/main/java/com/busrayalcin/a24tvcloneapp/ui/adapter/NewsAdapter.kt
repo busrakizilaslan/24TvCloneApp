@@ -38,7 +38,7 @@ class NewsAdapter(var mContext : Context,
         hb.newsObject = newsItem
         hb.ivNewsImage.showUrlImage(newsItem.imageUrl)
         hb.cvNews.setOnClickListener {
-            Navigation.doNavigate(it,HomeFragmentDirections.actionHomeFragmentToDetailFragment())
+            Navigation.doNavigate(it,HomeFragmentDirections.actionHomeFragmentToDetailFragment(news = newsItem))
         }
 
     }
